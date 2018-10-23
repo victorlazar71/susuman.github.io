@@ -1,2 +1,6 @@
 # susuman.github.io
-Programe pentru telefoane
+
+
+## Sunt tare ## 
+_Sunt bengos_
+"My personal website"
