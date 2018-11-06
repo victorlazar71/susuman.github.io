@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version : 2018.11.06.10";
+document.getElementById("id_logic_version").innerHTML = "Logic version : 2018.11.06.11";
 
 window.addEventListener("deviceorientation", la_schimbare_gyro);
 window.addEventListener("devicemotion", la_schimbare_acc);
@@ -12,6 +12,10 @@ function la_schimbare_acc(e)
   document.getElementById("id_acc_x").innerHTML = "acc_x = " + acc_x;
   document.getElementById("id_acc_y").innerHTML = "acc_y = " + acc_y;
   document.getElementById("id_acc_z").innerHTML = "acc_z = " + acc_z;
+  
+  document.getElementById("id_rot_x").inner.HTML = Math.atan(acc_x / acc_z) * 180 / Math.PI;
+  document.getElementById("id_rot_y").inner.HTML = Math.atan(acc_y / acc_z) * 180 / Math.PI;
+
 }
 
 function la_schimbare_gyro(e)
