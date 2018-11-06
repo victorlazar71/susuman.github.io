@@ -13,8 +13,8 @@ function la_schimbare_acc(e)
   document.getElementById("id_acc_y").innerHTML = "acc_y = " + acc_y;
   document.getElementById("id_acc_z").innerHTML = "acc_z = " + acc_z;
   
-  document.getElementById("id_rot_x").inner.HTML = Math.atan(acc_x / acc_z) * 180 / Math.PI;
-  document.getElementById("id_rot_y").inner.HTML = Math.atan(acc_y / acc_z) * 180 / Math.PI;
+  document.getElementById("id_rot_x").innerHTML = Math.atan(acc_x / acc_z) * 180 / Math.PI;
+  document.getElementById("id_rot_y").innerHTML = Math.atan(acc_y / acc_z) * 180 / Math.PI;
 
 }
 
