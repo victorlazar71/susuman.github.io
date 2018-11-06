@@ -1,13 +1,17 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version : 2018.11.06.8";
+document.getElementById("id_logic_version").innerHTML = "Logic version : 2018.11.06.9";
 
 window.addEventListener("deviceorientation", la_schimbare_gyro);
 window.addEventListener("devicemotion", la_schimbare_acc);
 
 function la_schimbare_acc(e)
 {
-  document.getElementById("id_acc_x").innerHTML = e.accelerationIncludingGravity.x;
-  document.getElementById("id_acc_y").innerHTML = e.accelerationIncludingGravity.y;
-  document.getElementById("id_acc_z").innerHTML = e.accelerationIncludingGravity.z;
+  var acc_x = e.accelerationIncludingGravity.x;
+  var acc_y = e.accelerationIncludingGravity.y;
+  var acc_z = e.accelerationIncludingGravity.z;
+  
+  document.getElementById("id_acc_x").innerHTML = "acc_x = " + acc_x;
+  document.getElementById("id_acc_y").innerHTML = "acc_y = " + acc_y;
+  document.getElementById("id_acc_z").innerHTML = "acc_z = " + acc_z;
 }
 
 function la_schimbare_gyro(e)
