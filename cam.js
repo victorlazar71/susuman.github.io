@@ -3,7 +3,7 @@ document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.
 
 function on_OK(e)
 {
-  document.getElementById("id_video").srcObject = stream;
+  document.getElementById("id_video").srcObject = e;
   
 }
 
