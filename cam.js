@@ -1,7 +1,7 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.13.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.13.4";
 
-document.getElementById("id_video").addEventListener("mousedown", on_touch);
-document.getElementById("id_video").addEventListener("touchstart", on_touch);
+document.getElementById("id_video").addEventListener("mousedown", on_touch); //printscr la clic
+document.getElementById("id_video").addEventListener("touchstart", on_touch); //printscr la atingere pe telefon
 
 
 function on_OK(stream)
@@ -28,9 +28,10 @@ function start()
 
 function on_touch(e)
 {
-  var canvas = document.getElementById("id_canvas");
-  var context = canvas.getContext("2d");
+  var canvas = document.getElementById("id_canvas"); //pentru luarea imagini
+  var context = canvas.getContext("2d"); //afisarea ei in plan 2d
   
-  var video = document.getElementById("id_video");
-  context.drowImage(video, 0, 0);
+  var video = document.getElementById("id_video"); //preluarea imagini din video
+  context.drawImage(video, 0, 0); //afisarea ei in plan 2d
+  
 }
