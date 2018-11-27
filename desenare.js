@@ -1,8 +1,9 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version = 2018.11.20.10";
+document.getElementById("id_logic_version").innerHTML = "Logic version = 2018.11.20.11";
 		
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
 canvas.addEventListener("touchmove", on_touch_move);
+canvas.addEventListener("touchmove", on_touch_end);
 
 var rect = canvas.getBoundingClientRect();
 //---------------------------------
@@ -69,3 +70,17 @@ function on_touch_move(e)
 	}	
 }
 //---------------------------------
+
+funtion on_touch_end(e)
+{
+	for (var i = 0; i < e.changedTouches.length; i++){
+
+	var j =0;
+	for(; j < last_position_array.lenght; j++)
+	if(last_position_array[j].id == e.changedTouches.item(i).identifier)
+	break;
+		
+	last_position_array.splice(j,1);
+	
+	
+}
