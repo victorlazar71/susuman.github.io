@@ -42,7 +42,11 @@ function on_touch_move(e)
 					20,
 					0, 2 * Math.PI
 					);
-		context.lineWidth = 40;			
+		
+		context.stroke();
+		context.beginPath();
+		
+		context.lineWidth = 20;			
 		context.moveTo(lastX - rect.left, lastY - rect.top);
 		context.lineTo(e.changedTouches.item(i).pageX - rect.left, 
 						e.changedTouches.item(i).pageY - rect.top);
