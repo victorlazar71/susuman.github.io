@@ -1,5 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = 
-		"Logic version = 2018.11.20.9";
+document.getElementById("id_logic_version").innerHTML = "Logic version = 2018.11.20.9";
 		
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
@@ -10,7 +9,7 @@ var rect = canvas.getBoundingClientRect();
 
 //var lastX = 0;
 //var lastY = 0;
-var last_position = (x:0, y:0, id:0);
+var last_position = {x:0, y:0, id:0};
 
 var last_position_array = [];
 
