@@ -74,6 +74,7 @@ function on_touch_move(e)
 function on_touch_end(e)
 {
 	for (var i = 0; i < e.changedTouches.length; i++)
+	{
 
 	var j =0;
 	for(; j < last_position_array.lenght; j++)
@@ -81,6 +82,6 @@ function on_touch_end(e)
 	break;
 		
 	last_position_array.splice(j,1);
-	
+	}
 	
 }
