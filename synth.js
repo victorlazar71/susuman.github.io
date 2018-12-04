@@ -19,8 +19,17 @@ function vorbeste()
     var enunt = new SpeechSynthesisUtterance();
     enunt.text = document.getElementById("id_text").value;
     enunt.lang = "ja-JP";
+    enunt.onend = sfarsit_vorbeste;
+    document.getElementById("id_vorbeste").disabled = true;
     synth.speak(enunt);
 	
+		
+}
+
+function sfarsit_vorbeste()
+{
+	document.getElementById("id_vorbeste").disabled = false;
+
 	
 	
 }
