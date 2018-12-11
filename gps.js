@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version 2018.12.11.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version 2018.12.11.1";
 
 function get_position()
 {
@@ -14,5 +14,5 @@ function on_gps_ok(e)
 
 function on_gps_error(e)
 {
-	alert("eroare GPS");
+	alert("eroare GPS + e.error");
 }
