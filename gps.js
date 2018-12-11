@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version 2018.12.11.1";
+document.getElementById("id_logic_version").innerHTML = "Logic version 2018.12.11.2";
 
 function get_position()
 {
