@@ -1,8 +1,8 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.12.11.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.12.11.1";
 
 var speech = new webkitSpeechRecognition();
 speech.onresult = on_result;
-speech.onspeechend = on_speech_ebnd;
+speech.onspeechend = on_speech_end;
 speech.lang = "en-US";
 
 function speack()
