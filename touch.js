@@ -11,7 +11,7 @@ function on_touch_svg(e)
 	{
 		var cerc = document.createElementNS("http://www.w3.org/2000/svg", "circle"); //creare element cerc in cazul nostru
 		cerc.setAttribute("cx", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
-		cerc.setAttribute("cy", e.changedTouches[i].pageY + svg_rect.top);
+		cerc.setAttribute("cy", e.changedTouches[i].pageY - svg_rect.top);
 		cerc.setAttribute("r", 20);
 		svg.appendChild(cerc);  // adaugare in svg ca si "copil" (subelement)
 
