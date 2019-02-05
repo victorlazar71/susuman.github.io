@@ -36,7 +36,7 @@ function on_touch(e)
 		last_position.x = e.changedTouches.item(i).pageX;		
 		last_position.y = e.changedTouches.item(i).pageY;
 		last_position.id = e.changedTouches.item(i).identifier;
-		last_position.color = genereaza_culoare();
+		last_position.color = 208;
 		
 		context.beginPath();
 		context.lineWidth = 1;
