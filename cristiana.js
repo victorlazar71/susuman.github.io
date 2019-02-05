@@ -1,5 +1,5 @@
 document.getElementById("id_logic_version").innerHTML = 
-		"Logic version = 2000.00.00.3";
+		"Logic version = 2000.00.00.4";
 		
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
@@ -10,17 +10,17 @@ canvas.addEventListener("touchend", on_touch_end);
 var rect = canvas.getBoundingClientRect();
 //---------------------------------
 
-var lastX = 0;
-var lastY = 0;
+//var lastX = 0;
+//var lastY = 0;
 
 
-//var last_position_array = [];
+var last_position_array = [];
 
 //---------------------------------
 function genereaza_culoare()
 {
 	var sir = "#";
-	var litere = "A";
+	var litere = "AB";
 	for (var i = 0; i < 6; i++)
 		sir += litere[Math.ceil(Math.random() * 16)];
 	return sir;
@@ -99,7 +99,7 @@ function on_touch_end(e)
 		var j = 0;
 		
 		for (; j < last_position_array.length; j++)
-			if (last_position_array[lastX].id == e.changedTouches.item(i).identifier)
+			if (last_position_array[j].id == e.changedTouches.item(i).identifier)
 				break;
 		
 		last_position_array.splice(j, 1);
