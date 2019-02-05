@@ -99,7 +99,7 @@ function on_touch_end(e)
 		var j = 0;
 		
 		for (; j < last_position_array.length; j++)
-			if (last_position_array[j].id == e.changedTouches.item(i).identifier)
+			if (last_position_array[lastX].id == e.changedTouches.item(i).identifier)
 				break;
 		
 		last_position_array.splice(j, 1);
