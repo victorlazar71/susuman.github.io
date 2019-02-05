@@ -1,5 +1,5 @@
 document.getElementById("id_logic_version").innerHTML = 
-		"Logic version = 2000.00.00.1";
+		"Logic version = 2000.00.00.2";
 		
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
@@ -20,7 +20,7 @@ var last_position_array = [];
 function genereaza_culoare()
 {
 	var sir = "#";
-	var litere = "09";
+	var litere = "9";
 	for (var i = 0; i < 6; i++)
 		sir += litere[Math.ceil(Math.random() * 16)];
 	return sir;
