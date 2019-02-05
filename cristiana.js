@@ -40,8 +40,8 @@ function on_touch(e)
 		
 		context.beginPath();
 		context.lineWidth = 1;
-		context.strokeStyle = last_position.color;
-		context.fillStyle = last_position.color;
+		context.strokeStyle = 208;
+		context.fillStyle = 208;
 		context.arc(e.changedTouches.item(i).pageX - rect.left,
 					e.changedTouches.item(i).pageY - rect.top,
 					10,
@@ -68,8 +68,8 @@ function on_touch_move(e)
 		var context = canvas.getContext("2d");
 		context.beginPath();
 		context.lineWidth = 1;
-		context.strokeStyle = last_position_array[j].color;
-		context.fillStyle = last_position_array[j].color;
+		context.strokeStyle = last_position_array[j].208;
+		context.fillStyle = last_position_array[j].208;
 		context.arc(e.changedTouches.item(i).pageX - rect.left,
 					e.changedTouches.item(i).pageY - rect.top,
 					10,
@@ -85,8 +85,8 @@ function on_touch_move(e)
 		context.moveTo(last_position_array[j].x - rect.left, last_position_array[j].y - rect.top);
 		context.lineTo(e.changedTouches.item(i).pageX - rect.left, 
 						e.changedTouches.item(i).pageY - rect.top);
-		context.strokeStyle = last_position_array[j].color;
-		context.fillStyle = last_position_array[j].color;
+		context.strokeStyle = last_position_array[j].208;
+		context.fillStyle = last_position_array[j].208;
 		last_position_array[j].x = e.changedTouches.item(i).pageX;		
 		last_position_array[j].y = e.changedTouches.item(i).pageY;		
 		context.stroke();			
