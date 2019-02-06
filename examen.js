@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
 var canvas = document.getElementById("canvas");
 
@@ -12,9 +12,15 @@ var rect = canvas.getBoundingClientRect();
 
 function on_touch(e)
 {
-	c = canvas.getContext("2d");
-	x=0, y=0, width=10, height=10;
+	e.preventDefault();
+	
+	for (var i = 0; i < e.changedTouches.length; i++)
+	{
+		var context = canvas.getContext("2d");
+
+			x, y, width=30, height=30;
 
 c.fillRect(x, y, width, height);
 
+}
 }
