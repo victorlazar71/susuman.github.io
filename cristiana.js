@@ -19,7 +19,7 @@ var last_position_array = [];
 //---------------------------------
 function genereaza_culoare()
 {
-	var sir = "#ff0000";
+	var sir = "#00ff00";
 	//var litere = "AB";
 	for (var i = 0; i < 6; i++)
 		sir //+= litere[Math.ceil(Math.random() * 16)];
