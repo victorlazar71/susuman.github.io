@@ -29,6 +29,6 @@ function on_touch_svg(e)
 		cub.setAttribute("y", e.changedTouches[i].pageY - svg_rect.top);
 		cub.setAttribute("width", 120);
 		cub.setAttribute("height", 50);
-		svg.appendChild(cub).color;  // adaugare in svg ca si "copil" (subelement)
+		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 }
 }
