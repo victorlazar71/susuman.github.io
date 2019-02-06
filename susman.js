@@ -1,21 +1,20 @@
-document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.1";
+document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.2";
 
 var svg = document.getElementById("id_svg");
 //var stea = document.getElementById("id_circle");
 
 svg.addEventListener("touchstart", on_touch_svg);
-svg.addEventListener("mousedown", on_touch_svg);
-
-var svg_rect = svg.getBoundingClientRect();
+svg.addEventListener("mousedown", on_mouse_svg);
 
 function on_touch_svg(e)
 {
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{
 		var stea = document.createElementNS("http://www.w3.org/2000/svg", "polygon"); //creare element cerc in cazul nostru
-		//stea.setAttribute("points", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
-		stea.setAttribute("points", e.changedTouches[i].page - svg_rect.top);
-		svg.appendChild(stea);  // adaugare in svg ca si "copil" (subelement)
+		cerc.setAttribute("cx", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
+		cerc.setAttribute("cy", e.changedTouches[i].pageY - svg_rect.top);
+		cerc.setAttribute("r", 20);
+		svg.appendChild(cerc);  // adaugare in svg ca si "copil" (subelement)
 
 }
 }
