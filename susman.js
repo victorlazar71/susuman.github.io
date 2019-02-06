@@ -6,6 +6,8 @@ var svg = document.getElementById("id_svg");
 svg.addEventListener("touchstart", on_touch_svg);
 svg.addEventListener("mousedown", on_touch_svg);
 
+var svg_rect = svg.getBoundingClientRect();
+
 function on_touch_svg(e)
 {
 	for (var i = 0; i < e.changedTouches.length; i++)
