@@ -2,7 +2,7 @@ document.getElementById("canvas").innerHTML = "Logic version: 2000.00.00.1";
 
 var canvas = document.getElementById("canvas");
 
-canvas.addEventListener("touchstart", on_touch);
+//canvas.addEventListener("touchstart", on_touch);
 //canvas.addEventListener("touchmove", on_touch_move);
 //canvas.addEventListener("touchend", on_touch_end);
 
