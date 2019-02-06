@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
 var svg = document.getElementById("id_svg");
 
@@ -32,4 +32,9 @@ function on_touch_svg(e)
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 
 }
+var sir = "#";
+	var litere = "0123456789ABCDEF";
+	for (var i = 0; i < 6; i++)
+		sir += litere[Math.ceil(Math.random() * 16)];
+	return sir;
 }
