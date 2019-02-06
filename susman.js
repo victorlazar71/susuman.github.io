@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.3";
+document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.4";
 
 var canvas, context, dragging = false, dragStartLocation;
 
@@ -57,5 +57,5 @@ function init()
 	canvas.addEventListener("on_touch_move", drag, false);
 	canvas.addEventListener("on_touch_stop", dragStop, false);
 	
-	window.addEventListener("load", init, false);
+	//window.addEventListener("load", init, false);
 }
