@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.2";
+document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.3";
 
 var canvas, context, dragging = false, dragStartLocation;
 
