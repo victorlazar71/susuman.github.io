@@ -1,20 +1,27 @@
 document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.2";
 
-var svg = document.getElementById("id_svg");
-//var stea = document.getElementById("id_circle");
+const canvas = document.getElementById('my-house');
+const ctx = canvas.getContext('2d');
 
-svg.addEventListener("touchstart", on_touch_svg);
-svg.addEventListener("mousedown", on_mouse_svg);
+canvas.addEventListener("touchstart", on_touch);
+canvas.addEventListener("touchmove", on_touch_move);
+canvas.addEventListener("touchend", on_touch_end);
 
-function on_touch_svg(e)
+function on_touch(e)
 {
-	for (var i = 0; i < e.changedTouches.length; i++)
-	{
-		var stea = document.createElementNS("http://www.w3.org/2000/svg", "polygon"); //creare element cerc in cazul nostru
-		cerc.setAttribute("cx", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
-		cerc.setAttribute("cy", e.changedTouches[i].pageY - svg_rect.top);
-		cerc.setAttribute("r", 20);
-		svg.appendChild(cerc);  // adaugare in svg ca si "copil" (subelement)
+// Set line width
+ctx.lineWidth = 10;
 
-}
+// Wall
+ctx.strokeRect(75, 140, 150, 110);
+
+// Door
+ctx.fillRect(130, 190, 40, 60);
+
+// Roof
+ctx.moveTo(50, 140);
+ctx.lineTo(150, 60);
+ctx.lineTo(250, 140);
+ctx.closePath();
+ctx.stroke();
 }
