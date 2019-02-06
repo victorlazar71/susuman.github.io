@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
 
 var svg = document.getElementById("id_svg");
 
@@ -25,7 +25,7 @@ function on_touch_svg(e)
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{
 		var cub = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-		var position = {x: 0, y: 0, id: 0};
+		//var position = {x: 0, y: 0, id: 0};
 		//position.id = e.changedTouches.item(i).identifier;
 		//position.color = genereaza_culoare();
 		//context.beginPath();
