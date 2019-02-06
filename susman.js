@@ -10,20 +10,15 @@ canvas.addEventListener("touchstart", dragStart);
 canvas.addEventListener("touchmove", drag);
 canvas.addEventListener("touchend", dragStop);
 
-function getCanvasCoordinates(event) {
-    var x = event.clientX - canvas.getBoundingClientRect().left,
-        y = event.clientY - canvas.getBoundingClientRect().top;
+var rect = canvas.getBoundingClientRect();
+
+function getCanvasCoordinates(e) {
+    var x = e.clientX - canvas.getBoundingClientRect().left,
+        y = e.clientY - canvas.getBoundingClientRect().top;
 
     return {x: x, y: y};
 }
 
-function takeSnapshot() {
-    snapshot = context.getImageData(0, 0, canvas.width, canvas.height);
-}
-
-function restoreSnapshot() {
-    context.putImageData(snapshot, 0, 0);
-}
 
 
 function drawLine(position) {
@@ -33,25 +28,25 @@ function drawLine(position) {
     context.stroke();
 }
 
-function dragStart(event) {
+function dragStart(e) {
     dragging = true;
-    dragStartLocation = getCanvasCoordinates(event);
+    dragStartLocation = e.changedTouches.getCanvasCoordinates(e);
     takeSnapshot();
 }
 
-function drag(event) {
+function drag(e) {
     var position;
     if (dragging === true) {
         restoreSnapshot();
-        position = getCanvasCoordinates(event);
+        position = e.changedTouches.getCanvasCoordinates(e);
         drawLine(position);
     }
 }
 
-function dragStop(event) {
+function dragStop(e) {
     dragging = false;
     restoreSnapshot();
-    var position = getCanvasCoordinates(event);
+    var position = getCanvasCoordinates(e);
     drawLine(position);
 }
 
@@ -60,11 +55,11 @@ function init() {
     context = canvas.getContext('2d');
     context.strokeStyle = 'purple';
     context.lineWidth = 6;
-    context.lineCap = 'round';
+    context.lineCap = e.changedTouches('round');
 
     canvas.addEventListener('touchstart', dragStart, false);
     canvas.addEventListener('touchmove', drag, false);
     canvas.addEventListener('touchend', dragStop, false);
 }
 
-//window.addEventListener('load', init, false);
+e.addEventListener('load', init, false);
