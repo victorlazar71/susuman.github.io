@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version = 2000.00.00.1";
+document.getElementById("id_logic_version").innerHTML = "Logic version = 2000.00.00.2";
 		
 var canvas,
     context,
@@ -59,9 +59,9 @@ function init() {
     context.lineWidth = 6;
     context.lineCap = 'round';
 
-    canvas.addEventListener('on_touch', dragStart, false);
-    canvas.addEventListener('on_touch_move', drag, false);
-    canvas.addEventListener('on_touch_stop', dragStop, false);
+    canvas.addEventListener('touchstart', dragStart, false);
+    canvas.addEventListener('touchmove', drag, false);
+    canvas.addEventListener('touchend', dragStop, false);
 }
 
 window.addEventListener('load', init, false);
