@@ -1,5 +1,5 @@
 document.getElementById("id_logic_version").innerHTML = 
-		"Logic version = 2000.00.00.4";
+		"Logic version = 2000.00.00.0";
 		
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
@@ -19,10 +19,10 @@ var last_position_array = [];
 //---------------------------------
 function genereaza_culoare()
 {
-	var sir = "#";
-	var litere = "AB";
+	var sir = "#ff0000";
+	//var litere = "AB";
 	for (var i = 0; i < 6; i++)
-		sir += litere[Math.ceil(Math.random() * 16)];
+		sir //+= litere[Math.ceil(Math.random() * 16)];
 	return sir;
 }
 //---------------------------------
@@ -36,12 +36,12 @@ function on_touch(e)
 		last_position.x = e.changedTouches.item(i).pageX;		
 		last_position.y = e.changedTouches.item(i).pageY;
 		last_position.id = e.changedTouches.item(i).identifier;
-		last_position.color = blue;
+		last_position.color = genereaza_culoare();
 		
 		context.beginPath();
 		context.lineWidth = 1;
-		context.strokeStyle = blue;
-		context.fillStyle = blue;
+		context.strokeStyle = last_position.color;
+		context.fillStyle = last_position.color;
 		context.arc(e.changedTouches.item(i).pageX - rect.left,
 					e.changedTouches.item(i).pageY - rect.top,
 					10,
@@ -68,8 +68,8 @@ function on_touch_move(e)
 		var context = canvas.getContext("2d");
 		context.beginPath();
 		context.lineWidth = 1;
-		context.strokeStyle = last_position_array[j].blue;
-		context.fillStyle = last_position_array[j].blue;
+		context.strokeStyle = last_position_array[j].color;
+		context.fillStyle = last_position_array[j].color;
 		context.arc(e.changedTouches.item(i).pageX - rect.left,
 					e.changedTouches.item(i).pageY - rect.top,
 					10,
@@ -85,8 +85,8 @@ function on_touch_move(e)
 		context.moveTo(last_position_array[j].x - rect.left, last_position_array[j].y - rect.top);
 		context.lineTo(e.changedTouches.item(i).pageX - rect.left, 
 						e.changedTouches.item(i).pageY - rect.top);
-		context.strokeStyle = last_position_array[j].blue;
-		context.fillStyle = last_position_array[j].blue;
+		context.strokeStyle = last_position_array[j].color;
+		context.fillStyle = last_position_array[j].color;
 		last_position_array[j].x = e.changedTouches.item(i).pageX;		
 		last_position_array[j].y = e.changedTouches.item(i).pageY;		
 		context.stroke();			
