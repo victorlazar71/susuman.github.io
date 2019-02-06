@@ -1,27 +1,61 @@
 document.getElementById("id_logic_version").innerHTML = " Logic version 2019.05.02.2";
 
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+var canvas, context, dragging = false, dragStartLocation;
 
-canvas.addEventListener("touchstart", on_touch);
-canvas.addEventListener("touchmove", on_touch_move);
-canvas.addEventListener("touchend", on_touch_end);
+//canvas.addEventListener("touchstart", on_touch);
+//canvas.addEventListener("touchmove", on_touch_move);
+//canvas.addEventListener("touchend", on_touch_end);
 
-function on_touch(e)
+function getCanvasCoordinates(e)
 {
-// Set line width
-ctx.lineWidth = 10;
+	var x = e.clientX - canvas.getBoundingClientRect().left,
+		y = e.clientY - canvas.getBoundingClientRect().top;
+		
+		return {x: x, y: y};
+}
 
-// Wall
-ctx.strokeRect(75, 140, 150, 110);
+function drawLine(position)
+{
+	context.beginPath();
+	context.moveTo(dragStartLocation.x, dragStartLocation.y);
+	context.lineTo(position.x, position.y);
+	context.stroke();
+}
 
-// Door
-ctx.fillRect(130, 190, 40, 60);
+function dragStart(e)
+{
+	dragging = true;
+	dragStartLocation = getCanvasCoordinates(e);
+}
 
-// Roof
-ctx.moveTo(50, 140);
-ctx.lineTo(150, 60);
-ctx.lineTo(250, 140);
-ctx.closePath();
-ctx.stroke();
+function drag(e)
+{
+	var position;
+	if(dragging == true)
+	{
+		position = getCanvasCoordinates(e);
+		drawLine(position);
+	}
+}
+
+function dragStop(e)
+{
+	dragging = false;
+	var position = getCanvasCoordinates(e);
+	drawLine(position);
+}
+
+function init()
+{
+	canvas = document.getElementById("id_canvas");
+	context = canvas.getContext("2D");
+	context.stokeStyle = "green";
+	context.lineWidth = 6;
+	context.lineCap = "round";
+	
+	canvas.addEventListener("on_touch", dragStart, false);
+	canvas.addEventListener("on_touch_move", drag, false);
+	canvas.addEventListener("on_touch_stop", dragStop, false);
+	
+	window.addEventListener("load", init, false);
 }
