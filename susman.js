@@ -1,3 +1,5 @@
+document.getElementById("id_logic_version").innerHTML = "Logic version = 2000.00.00.1";
+		
 var canvas,
     context,
     dragging = false,
@@ -57,9 +59,9 @@ function init() {
     context.lineWidth = 6;
     context.lineCap = 'round';
 
-    canvas.addEventListener('mousedown', dragStart, false);
-    canvas.addEventListener('mousemove', drag, false);
-    canvas.addEventListener('mouseup', dragStop, false);
+    canvas.addEventListener('on_touch', dragStart, false);
+    canvas.addEventListener('on_touch_move', drag, false);
+    canvas.addEventListener('on_touch_stop', dragStop, false);
 }
 
 window.addEventListener('load', init, false);
