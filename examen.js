@@ -1,26 +1,31 @@
 document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
-var canvas = document.getElementById("canvas");
+var svg = document.getElementById("id_svg");
 
-canvas.addEventListener("touchstart", on_touch);
-canvas.addEventListener("mousedown", on_touch);
+svg.addEventListener("touchstart", on_touch_svg);
+svg.addEventListener("mousedown", on_touch_svg);
 
 //canvas.addEventListener("touchmove", on_touch_move);
 //canvas.addEventListener("touchend", on_touch_end);
 
-var rect = canvas.getBoundingClientRect();
+var svg_rect = svg.getBoundingClientRect();
 
-function on_touch(e)
+function on_touch_svg(e)
 {
-	e.preventDefault();
 	
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{
-		var context = canvas.getContext("2d");
+		var cub = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+		
+		cub.setAttribute("x", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
+		cub.setAttribute("y", e.changedTouches[i].pageY - svg_rect.top);
+		cub.setAttribute("width", 50);
+		cub.setAttribute("height", 50);
+		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 
-			x, y, width=30, height=30;
+			//x, y, width=30, height=30;
 
-c.fillRect(x, y, width, height);
+//c.fillRect(x, y, width, height);
 
 }
 }
