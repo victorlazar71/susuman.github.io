@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.6";
 
 var svg = document.getElementById("id_svg");
 
@@ -27,7 +27,7 @@ function on_touch_svg(e)
 		var cub = document.createElementNS("http://www.w3.org/2000/svg", "rect");
 		//var position = {x: 0, y: 0, id: 0};
 		//position.id = e.changedTouches.item(i).identifier;
-		//position.color = genereaza_culoare();
+		cub.color = genereaza_culoare();
 		//context.beginPath();
 		
 		cub.setAttribute("x", e.changedTouches[i].pageX);  //atributele cercului cu valorile din paranteze
@@ -35,10 +35,8 @@ function on_touch_svg(e)
 		cub.setAttribute("width", 100);
 		cub.setAttribute("height", 100);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-		//context.strokeStyle = position.color;
-		//context.fillStyle = position.color;
-		context.fill();
-		context.stroke();
+		context.strokeStyle = cub.color;
+		context.fillStyle = cub.color;
 		
 
 }
