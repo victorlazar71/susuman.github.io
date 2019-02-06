@@ -6,6 +6,9 @@ var canvas,
     dragStartLocation,
     snapshot;
 
+canvas.addEventListener("touchstart", dragStart);
+canvas.addEventListener("touchmove", drag);
+canvas.addEventListener("touchend", dragStop);
 
 function getCanvasCoordinates(event) {
     var x = event.clientX - canvas.getBoundingClientRect().left,
@@ -64,4 +67,4 @@ function init() {
     canvas.addEventListener('touchend', dragStop, false);
 }
 
-window.addEventListener('load', init, false);
+//window.addEventListener('load', init, false);
