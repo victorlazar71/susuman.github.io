@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
 var svg = document.getElementById("id_svg");
 
@@ -36,11 +36,11 @@ function on_touch_svg(e)
 }
 }
 function myMove() {
-  var elem = document.getElementById("id_svg"); 
-  var pos = 0;
+  var elem = document.getElementById("cub"); 
+  var pos = e.changedTouches.length;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 350) {
+    if (pos == e.changedTouches.length) {
       clearInterval(id);
     } else {
       pos++; 
