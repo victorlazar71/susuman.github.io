@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.2";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.3";
 var svg = document.getElementById("id_svg");
 var cerca = document.getElementById("id_circlea");
 var cercb = document.getElementById("id_circleb");
