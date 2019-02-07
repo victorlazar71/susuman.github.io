@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.2";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
 
 var svg = document.getElementById("id_svg");
 
@@ -44,7 +44,8 @@ function myMove() {
       clearInterval(id);
     } else {
       pos++; 
-      cub = pos + e.changedTouches[i].pageX; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
     }
   }
 }
