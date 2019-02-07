@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.1";
 
 var svg = document.getElementById("id_svg");
 
@@ -35,6 +35,16 @@ function on_touch_svg(e)
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 }
 }
-animate(e)
-{ attributeType="XML" attributeName="cub" from="e.changedTouches[i].pageX" to="700"
-dur="20s" repeatCount="indefinite"};
+function myMove() {
+  var elem = document.getElementById("id_svg"); 
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + e.changedTouches[i].pageX; 
+    }
+  }
+}
