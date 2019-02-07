@@ -1,10 +1,16 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2019.02.11.1";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2019.02.11.2";
 
 var svg = document.getElementById("id_svg");
+var cerc1 = document.getElementById("id_cerc1");
+var cerc2 = document.getElementById("id_cerc2");
+var cerc3 = document.getElementById("id_cerc3");
+
 
 var svg_rect = svg.getBoundingClientRect();
 
-svg.addEventListener("touchstart", on_touch_svg);
+cerc1.addEventListener("touchstart", on_touch);
+cerc2.addEventListener("touchstart", on_touch);
+cerc3.addEventListener("touchstart", on_touch);
 
 function genereaza_culoare()
 {
@@ -15,10 +21,13 @@ function genereaza_culoare()
 	return sir;
 }
 
-function on_touch_svg()
+function on_touch()
 {
 	e.preventDefault();
 	var x = genereaza_culoare();
-	svg.setAttribute("fill", x);
+	cerc1.setAttribute("fill", x);
+	cerc2.setAttribute("fill", x);
+	cerc3.setAttribute("fill", x);
+
 	console.log("atinge");
 }
