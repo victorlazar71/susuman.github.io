@@ -33,8 +33,7 @@ function on_touch_svg(e)
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-		-webkit-animation: slidein "3s" linear "1s" infinite running;
-}
+animationEvent.initAnimationEvent(false, false, false, cub, 5);}
 }
 //var x =0;
 function animate()
