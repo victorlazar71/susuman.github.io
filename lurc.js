@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.1";
 var svg = document.getElementById("id_svg");
 var cerca = document.getElementById("id_circlea");
 var cercb = document.getElementById("id_circleb");
@@ -16,6 +16,9 @@ var sound_c = document.getElementById("audio_c");
 function on_touch(e)
 {
 	var x = "#00ff00";
+	var z = "#0f0f00";
+	var x = "#00f0f0";
+
 	e.preventDefault();
 	//cerc.setAttribute("cx", e.changedTouches[0].pageX);
 	//cerc.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
