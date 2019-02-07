@@ -40,7 +40,6 @@ function on_touch_svg(e)
 	}
 
 sound.play();
-alert("ai gasit 10 euro");
 }
 function alarma(e)
 {
