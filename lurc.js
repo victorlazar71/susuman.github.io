@@ -9,7 +9,9 @@ cercb.addEventListener("touchstart", on_touch);
 cercc.addEventListener("touchstart", on_touch);
 
 var svg_rect = svg.getBoundingClientRect();
-var sound = document.getElementById("audio");
+var sound_a = document.getElementById("audio_a");
+var sound_b = document.getElementById("audio_b");
+var sound_c = document.getElementById("audio_c");
 
 function on_touch(e)
 {
@@ -18,5 +20,8 @@ function on_touch(e)
 	//cerc.setAttribute("cx", e.changedTouches[0].pageX);
 	//cerc.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
 	cerc.setAttribute("fill", x);
-	sound.play();
+	sound_a.play();
+	sound_b.play();
+	sound_c.play();
+
 }
