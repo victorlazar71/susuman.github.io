@@ -19,11 +19,11 @@ function on_touch(e)
 	var x = "#00ff00";
 	var z = "#0f0f00";
 	var c = "#00f0f0";
+	cerca.setAttribute("fill", x);
 	cercb.setAttribute("fill", z);
 	cercc.setAttribute("fill", c);
 	sound_a.play();
 	sound_b.play();
 	sound_c.play();
 
-}
 }
