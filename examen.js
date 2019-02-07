@@ -1,12 +1,13 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.2";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
 
 var svg = document.getElementById("id_svg");
+//var zxc = document.getElementById("anime");
 
 svg.addEventListener("touchstart", on_touch_svg);
 svg.addEventListener("mousedown", on_touch_svg);
 
 //canvas.addEventListener("touchmove", on_touch_move);
-//canvas.addEventListener("touchend", on_touch_end);
+svg.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
 
@@ -32,15 +33,22 @@ function on_touch_svg(e)
 		cub.setAttribute("width", 120);
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
-		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)		//var animation = new Animation([effect][, timeline]);
-		
-		function animate(e)
-		{
-			requestAnimationFrame(animate);
-			console.log("ceva");
-			svg.appendChild(cub);
-			e.changedTouches[i].pageX++;
+		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
+	  //zxc = cub;
 }
-animate();
 }
+
+function on_touch_end() {
+  var elem = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == width) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'width'; 
+      elem.style.left = pos + 'width'; 
+    }
+  }
 }
