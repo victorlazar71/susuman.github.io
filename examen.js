@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.7";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
@@ -41,12 +41,11 @@ function on_touch_svg(e)
 if(color == "#0f0f00")
 	  {  
 		  nr++;
-		  var a = nr;
-		  if(a == 3)
+}
+if(nr == 3)
 {
 	alert("ai gasit 10 euro");
 	sound_c.play();
-}
 }
 	  	
 sound.play();
