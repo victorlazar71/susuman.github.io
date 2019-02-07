@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.6";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.7";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
@@ -38,22 +38,19 @@ function on_touch_svg(e)
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 	}
-
-sound.play();
-}
-function alarma(e)
-{
-	var color = genereaza_culoare();
-		  
-		  if(color == "#0f0f00")
+if(color == "#0f0f00")
 	  {  
 		  nr++;
-	  }
-	 var a = nr; 
-
-if(a == 3)
+		  var a = nr;
+		  if(a == 3)
 {
 	alert("ai gasit 10 euro");
 	sound_c.play();
 }
 }
+	  	
+sound.play();
+}		  
+	
+
+
