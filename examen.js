@@ -32,9 +32,7 @@ function on_touch_svg(e)
 		cub.setAttribute("width", 120);
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
-		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-		animation: 3s linear 1s infinite running;
-		//var animation = new Animation([effect][, timeline]);
+		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)		//var animation = new Animation([effect][, timeline]);
 		
 }
 }
@@ -43,11 +41,11 @@ function animate()
 {
 	requestAnimationFrame(animate);
 	console.log("ceva");
-	atributeType = "xmls";
-	attributeName="x" 
-	from="x" 
-	to="600"
-    dur="10s" 
-	repeatCount="indefinite"
+	atributeType = "XML";
+	attributeName="x"; 
+	from="x" ;
+	to="600";
+    dur="10s"; 
+	repeatCount="indefinite";
 }
 animate();
