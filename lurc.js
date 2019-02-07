@@ -4,3 +4,9 @@ var svg = document.getElementById("id_svg");
 
 var svg_rect = svg.getBoundingClientRect();
 
+svg.addEventListener("touchstart", on_touch_svg);
+
+function on_touch_svg()
+{
+	console.log("atinge");
+}
