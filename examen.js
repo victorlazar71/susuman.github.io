@@ -1,12 +1,10 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.1";
 
 var svg = document.getElementById("id_svg");
-//var zxc = document.getElementById("anime");
+var zxc = document.getElementById("anime");
 
 svg.addEventListener("touchstart", on_touch_svg);
 svg.addEventListener("mousedown", on_touch_svg);
-
-//canvas.addEventListener("touchmove", on_touch_move);
 svg.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
@@ -34,12 +32,12 @@ function on_touch_svg(e)
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-	  //zxc = cub;
+	  document.getElementById("anime") = cub;
 }
 }
 
 function on_touch_end() {
-  var elem = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  var elem = zxc;
   var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
