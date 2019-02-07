@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.6";
 
 var svg = document.getElementById("id_svg");
 
@@ -9,6 +9,7 @@ svg.addEventListener("mousedown", on_touch_svg);
 //canvas.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
+var reqID, x=0;
 
 function genereaza_culoare()
 {
@@ -33,9 +34,12 @@ function on_touch_svg(e)
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-		cub.clearRect(0, 0, 120, 50);
-
-		var loopTimer = setTimeout("on_touch_svg("+e.changedTouches[i].pageX+", "+e.changedTouches[i].pageY - svg_rect.top+")", 200);
+		
+		x++;
+		cub.setAttribute("x", x);
+		reqID = window.requestAnimationFrame(on_touch_svg);
+		
 }
+		reqID = window.requestAnimationFrame(on_touch_svg);
 }
 
