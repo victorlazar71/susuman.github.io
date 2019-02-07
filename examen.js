@@ -51,4 +51,3 @@ var pos = 0;
       elem= pos + "x"; 
     }
   }
-}
