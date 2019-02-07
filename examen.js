@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.6";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
 
 var svg = document.getElementById("id_svg");
 
@@ -21,6 +21,7 @@ function genereaza_culoare()
 
 function on_touch_svg(e)
 {
+	e.preventDefault();
 	
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{
