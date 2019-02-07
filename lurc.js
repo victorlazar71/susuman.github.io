@@ -15,14 +15,10 @@ var sound_c = document.getElementById("audio_c");
 
 function on_touch(e)
 {
+	e.preventDefault();
 	var x = "#00ff00";
 	var z = "#0f0f00";
 	var c = "#00f0f0";
-
-	e.preventDefault();
-	//cerc.setAttribute("cx", e.changedTouches[0].pageX);
-	//cerc.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
-	cerca.setAttribute("fill", x);
 	cercb.setAttribute("fill", z);
 	cercc.setAttribute("fill", c);
 	sound_a.play();
