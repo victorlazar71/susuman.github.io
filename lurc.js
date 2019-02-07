@@ -1,8 +1,13 @@
 document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
 var svg = document.getElementById("id_svg");
-var cerc = document.getElementById("id_circle");
+var cerca = document.getElementById("id_circlea");
+var cercb = document.getElementById("id_circleb");
+var cercc = document.getElementById("id_circlec");
 
-cerc.addEventListener("touchstart", on_touch);
+cerca.addEventListener("touchstart", on_touch);
+cercb.addEventListener("touchstart", on_touch);
+cercc.addEventListener("touchstart", on_touch);
+
 var svg_rect = svg.getBoundingClientRect();
 var sound = document.getElementById("audio");
 
