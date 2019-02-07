@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2019.02.11.2";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2019.02.11.3";
 
 var svg = document.getElementById("id_svg");
 var cerc1 = document.getElementById("id_cerc1");
@@ -25,9 +25,8 @@ function on_touch()
 {
 	e.preventDefault();
 	var x = genereaza_culoare();
+	cerc1.setAttribute("cx", e.changedTouches[0].pageX);
+	cerc1.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
 	cerc1.setAttribute("fill", x);
-	cerc2.setAttribute("fill", x);
-	cerc3.setAttribute("fill", x);
-
 	console.log("atinge");
 }
