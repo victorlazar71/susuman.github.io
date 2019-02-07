@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.6";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
 
 var svg = document.getElementById("id_svg");
 
@@ -43,12 +43,9 @@ function myMove() {
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);
-  var pos = e.changedTouches.length;
+var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == e.changedTouches.length) {
-      clearInterval(id);
-    } else {
       pos++; 
       elem = pos + "x"; 
       elem= pos + "x"; 
