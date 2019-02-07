@@ -19,7 +19,9 @@ function on_touch(e)
 	e.preventDefault();
 	//cerc.setAttribute("cx", e.changedTouches[0].pageX);
 	//cerc.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
-	cerc.setAttribute("fill", x);
+	cerca.setAttribute("fill", x);
+	cercb.setAttribute("fill", x);
+	cercc.setAttribute("fill", x);
 	sound_a.play();
 	sound_b.play();
 	sound_c.play();
