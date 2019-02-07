@@ -35,5 +35,6 @@ function on_touch_svg(e)
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 }
 }
-animate({ attributeType="XML" attributeName="cub" from="e.changedTouches[i].pageX" to="700"
-dur="20s" repeatCount="indefinite"});
+animate(e)
+{ attributeType="XML" attributeName="cub" from="e.changedTouches[i].pageX" to="700"
+dur="20s" repeatCount="indefinite"};
