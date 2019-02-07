@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
 var svg = document.getElementById("id_svg");
 
@@ -9,7 +9,6 @@ svg.addEventListener("mousedown", on_touch_svg);
 //canvas.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
-
 
 function genereaza_culoare()
 {
@@ -37,10 +36,10 @@ function on_touch_svg(e)
 		
 }
 }
-var x =0;
+//var x =0;
 function animate()
 {
 	requestAnimationFrame(animate);
 	console.log("ceva");
 }
-animate();
+//animate();
