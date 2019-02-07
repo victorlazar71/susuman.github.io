@@ -10,16 +10,16 @@ canvas.addEventListener("touchend", on_touch_end);
 var rect = canvas.getBoundingClientRect();
 //---------------------------------
 
-//var lastX = 0;
-//var lastY = 0;
+var lastX = 0;
+var lastY = 0;
 
 
-var last_position_array = [];
+//var last_position_array = [];
 
 //---------------------------------
 function genereaza_culoare()
 {
-	var sir = "#00ff00";
+	var sir = "#0f0f00";
 	//var litere = "AB";
 	for (var i = 0; i < 6; i++)
 		sir //+= litere[Math.ceil(Math.random() * 16)];
@@ -50,7 +50,8 @@ function on_touch(e)
 		context.fill();
 		context.stroke();
 		
-		last_position_array.push(last_position);
+		lastX.push(last_position);
+		lastY.push(last_position);
 	}
 }
 //---------------------------------
@@ -61,15 +62,15 @@ function on_touch_move(e)
 	for (var i = 0; i < e.changedTouches.length; i++){
 		
 		var j = 0;
-		for (; j < last_position_array.length; j++)
-			if (last_position_array[j].id == e.changedTouches.item(i).identifier)
+		for (; j < last_position.length; j++)
+			if (last_position[x, y].id == e.changedTouches.item(i).identifier)
 				break;
 		
 		var context = canvas.getContext("2d");
 		context.beginPath();
 		context.lineWidth = 1;
-		context.strokeStyle = last_position_array[j].color;
-		context.fillStyle = last_position_array[j].color;
+		context.strokeStyle = last_position.color;
+		context.fillStyle = last_position.color;
 		context.arc(e.changedTouches.item(i).pageX - rect.left,
 					e.changedTouches.item(i).pageY - rect.top,
 					10,
@@ -82,7 +83,7 @@ function on_touch_move(e)
 		context.lineWidth = 20;		
 
 			
-		context.moveTo(last_position_array[j].x - rect.left, last_position_array[j].y - rect.top);
+		context.moveTo(lastX.x - rect.left, lastY.y - rect.top);
 		context.lineTo(e.changedTouches.item(i).pageX - rect.left, 
 						e.changedTouches.item(i).pageY - rect.top);
 		context.strokeStyle = last_position_array[j].color;
