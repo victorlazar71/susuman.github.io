@@ -6,11 +6,10 @@ var cerc1 = document.getElementById("id_cerc1");
 //var cerc3 = document.getElementById("id_cerc3");
 
 
-var svg_rect = svg.getBoundingClientRect();
-
 //cerc1.addEventListener("touchstart", on_touch);
 cerc1.addEventListener("touchmove", on_touch_move);
 //cerc3.addEventListener("touchstart", on_touch);
+var svg_rect = svg.getBoundingClientRect();
 
 function genereaza_culoare()
 {
@@ -23,10 +22,8 @@ function genereaza_culoare()
 
 function on_touch_move()
 {
-	e.preventDefault();
-	
-	
 		//var x = genereaza_culoare();
+		e.preventDefault();
 		cerc1.setAttribute("cx", e.changedTouches[0].pageX);
 		cerc1.setAttribute("cy", e.changedTouches[0].pageY - svg_rect.top);
 		//cerc1.setAttribute("fill", x);
