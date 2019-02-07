@@ -38,16 +38,23 @@ function on_touch_svg(e)
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 	}
-	  if(color == "#0f0f00")
+
+sound.play();
+alert("ai gasit 10 euro");
+}
+function alarma(e)
+{
+	var color = genereaza_culoare();
+		  
+		  if(color == "#0f0f00")
 	  {  
 		  nr++;
 	  }
-	  
+	 var a = nr; 
 
-if(nr == 3)
+if(a == 3)
 {
 	alert("ai gasit 10 euro");
 	sound_c.play();
 }
-sound.play();
 }
