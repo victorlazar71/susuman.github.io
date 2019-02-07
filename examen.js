@@ -1,13 +1,17 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.1";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.2";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
+var sound = document.getElementById("audio");
+var sound_c = document.getElementById("audio_c");
 
 svg.addEventListener("touchstart", on_touch_svg);
 svg.addEventListener("mousedown", on_touch_svg);
 svg.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
+var nr = 0;
+
 
 function genereaza_culoare()
 {
@@ -33,6 +37,18 @@ function on_touch_svg(e)
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 	  document.getElementById("anime") = cub;
+	  sound.play();
+	  if(color == "#0f0f00")
+	  {
+		  
+		  nr++;
+	  }
+	  
+}
+if(nr == 10)
+{
+	alert("ai gasit 10 euro");
+	sound_c.play();
 }
 }
 
