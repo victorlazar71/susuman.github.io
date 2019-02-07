@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
 
 var svg = document.getElementById("id_svg");
 
@@ -32,6 +32,6 @@ function on_touch_svg(e)
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-		svg.fillStyle = "blue";
+		//svg.fillStyle = "blue";
 }
 }
