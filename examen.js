@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.4";
 
 var svg = document.getElementById("id_svg");
 
@@ -33,12 +33,21 @@ function on_touch_svg(e)
 		cub.setAttribute("height", 50);
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
-animationEvent.initAnimationEvent(false, false, false, cub, 5);}
+		animation: 3s linear 1s infinite running;
+		//var animation = new Animation([effect][, timeline]);
+		
 }
-//var x =0;
+}
+
 function animate()
 {
 	requestAnimationFrame(animate);
 	console.log("ceva");
+	atributeType = "xmls";
+	attributeName="x" 
+	from="x" 
+	to="600"
+    dur="10s" 
+	repeatCount="indefinite"
 }
-//animate();
+animate();
