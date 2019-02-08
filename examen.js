@@ -38,7 +38,7 @@ function on_touch_svg(e)
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 	}
-if(color == "red")
+if(color == "black")
 {
 		  nr++;
 }
