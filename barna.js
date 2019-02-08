@@ -34,7 +34,7 @@ function genereaza_culoare()
 	{ 
 	  var a = genereaza_culoare();
 	  ctx.beginPath();
-      ctx.fill(a);
+      ctx.fill();
       ctx.arc(212.5, 212.5, 100, 0, 2 * Math.PI);
 	  ctx.stroke();
    }
