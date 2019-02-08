@@ -11,6 +11,6 @@ function desenare(x, y)
 	desen.fillStyle = "pink";
 	desen.fillRect(x, 20, 100, 100);
 	desen.restore()
-	x+=5
+	x+=5;
 	var loopTimer = setTimeout("desenare("+x+", "+y+")", 20);
 	}
