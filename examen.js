@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.5";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
@@ -40,7 +40,7 @@ function on_touch_svg(e)
 		var a = cub.setAttribute("fill", color);
 
 	}
-if(a === "000000")
+if(a === "00f0f00")
 {
 		  nr++;
 }
