@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.3";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
 
 var svg = document.getElementById("id_svg");
 var site_html = document.getElementById("id_html");
@@ -13,22 +13,15 @@ var svg_rect = svg.getBoundingClientRect();
 
 function on_touch_one(e)
 {
-	e.preventDefault();
 window.open("https://www.w3schools.com");
-
 }
 
 function on_touch_two(e)
 {
-	e.preventDefault();
-
-	sound_b.play();
-
+window.open("https://www.java.com/en/");
 }
 
 function on_touch_tree(e)
 {
-	e.preventDefault();
-	sound_c.play();
-
+window.open("https://screenrant.com/tag/dragonball/");
 }
