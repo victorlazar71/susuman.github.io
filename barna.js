@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.4";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.5";
 
 	var c2 = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -33,15 +33,17 @@ function genereaza_culoare()
    function cerc() 
 	{ 
 	  var a = genereaza_culoare();
+	  ctx.beginPath();
       ctx.fillStyle = a;
       ctx.arc(112.5, 112.5, 20, 0, 2 * Math.PI);
+	  ctx.stroke();
    }
    
    function stroke() 
 	{ 
 	  var a = genereaza_culoare();
       ctx.fillStyle = a;
-      ctx.fillCircle(112.5, 112.5, 200, 200);
+      ctx.strokeW(112.5, 112.5, 200, 200);
    }
    
    function clear_rect() 
