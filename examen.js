@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.0";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
@@ -20,14 +20,12 @@ function genereaza_culoare()
 	for (var i = 0; i < 6; i++)
 		sir += litere[Math.ceil(Math.random() * 16)];
 	return sir;
-	console.log("sir");
 }
 
 function on_touch_svg(e)
 {
 	e.preventDefault();
 	var color = genereaza_culoare();
-	console.log("color");
 	
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{		
@@ -40,9 +38,10 @@ function on_touch_svg(e)
 		cub.setAttribute("fill", color);
 		svg.appendChild(cub);  // adaugare in svg ca si "copil" (subelement)
 	}
-
+if(color == red)
+{
 		  nr++;
-
+}
 if(nr === 3)
 {
 	alert("ai gasit 10 euro");
