@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.02.11.0";
 
 var svg = document.getElementById("id_svg");
 var zxc = document.getElementById("anime");
@@ -40,11 +40,11 @@ function on_touch_svg(e)
 
 	}
 	nr++
-if(color === "#0f0f00")
+if(color == "#0f0f00")
 {
 	nr++
 }
-if(nr === 3)
+if(nr == 15)
 {
 	alert("felicitari ai apasat de 1000000000000 ori si ai gasit 10 euro");
 	sound_c.play();
