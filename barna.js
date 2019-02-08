@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.2";
 
 	var c2 = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -32,14 +32,15 @@ function genereaza_culoare()
       
    function cerc() 
 	{ 
-	  var a = genereaza_culoare();
+	  var c = genereaza_culoare();
       ctx.arc(212.5, 212.5, 100, 0, 2 * Math.PI);
+	  ctx.fillStyle = c;
+	  ctx.fill();
 	  ctx.stroke();
    }
-      function stroke() 
+      function stroke1() 
 	{ 
 	  var a = genereaza_culoare();
-	  ctx.fillStyle = a;
       ctx.arc(212.5, 212.5, 150, 0, 2 * Math.PI);
 	  ctx.stroke();
    }
