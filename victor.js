@@ -2,7 +2,7 @@ document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
 var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
 
-pat.addEventListener("touchmove", on_touch_move);
+patrat.addEventListener("touchmove", on_touch_move);
 var svg_rect = svg.getBoundingClientRect();
 
 function genereaza_culoare()
@@ -21,6 +21,5 @@ function on_touch_move(e)
 	patrat.setAttribute("x", e.changedTouches[0].pageX);
 	patrat.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
 	patrat.setAttribute("fill", a);
+	alert("obiectul a fost mutat");
 }
-
-// gta remove prb make gd again
