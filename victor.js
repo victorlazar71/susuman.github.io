@@ -1,8 +1,9 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.1";
 var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
 
 patrat.addEventListener("touchmove", on_touch_move);
+patrat.addEventListener("touchend", on_touch_move);
 var svg_rect = svg.getBoundingClientRect();
 
 function genereaza_culoare()
