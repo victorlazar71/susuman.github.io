@@ -5,7 +5,7 @@ var svg_rect = getBoundingClientRect();
 
 svg.addEventListener("touchstart", init);
 
-function init()
+function init(e)
 {
 	var picture = document.getElementById("stea");
 	
