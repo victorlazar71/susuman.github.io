@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.1";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.2";
 
 svg.addEventListener("touchstart", on_touch);
 
@@ -6,6 +6,8 @@ var svg_rect = svg.getBoundingClientRect();
 
 function on_touch(e)
 {
+	for (var i = 0; i < e.changedTouches.length; i++)
+	{
 	var canvas = document.getElementById("canvas");
 	var desen = canvas.getContext("2d");
 	desen.save();
@@ -15,4 +17,5 @@ function on_touch(e)
 	desen.restore()
 	x+=5
 	var loopTimer = setTimeout("on_touch("+e+")", 20);
+}
 }
