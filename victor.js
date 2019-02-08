@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.5";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
 var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
 var patrat1 = document.getElementById("id_patrat1");
@@ -6,9 +6,9 @@ var patrat2 = document.getElementById("id_patrat2");
 
 patrat.addEventListener("touchmove", on_touch_move);
 patrat.addEventListener("touchend", on_touch);
-patrat1.addEventListener("touchmove", on_touch_move);
+patrat1.addEventListener("touchmove", on_touch_move1);
 patrat1.addEventListener("touchend", on_touch);
-patrat2.addEventListener("touchmove", on_touch_move);
+patrat2.addEventListener("touchmove", on_touch_move2);
 patrat2.addEventListener("touchend", on_touch);
 
 var svg_rect = svg.getBoundingClientRect();
@@ -32,7 +32,7 @@ function on_touch_move(e)
 	
 }
 
-function on_touch_move(e)
+function on_touch_move1(e)
 {
 	var a = genereaza_culoare();
 	e.preventDefault();
@@ -42,7 +42,7 @@ function on_touch_move(e)
 	
 }
 
-function on_touch_move(e)
+function on_touch_move2(e)
 {
 	var a = genereaza_culoare();
 	e.preventDefault();
