@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.3";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.4";
 var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
 var patrat1 = document.getElementById("id_patrat1");
@@ -28,8 +28,10 @@ function on_touch_move(e)
 	e.preventDefault();
 	patrat.setAttribute("x", e.changedTouches[0].pageX);
 	patrat.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
+	patrat.setAttribute("fill", a);
 	patrat1.setAttribute("x", e.changedTouches[0].pageX);
 	patrat1.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
+	patrat.setAttribute("fill", a);
 	patrat2.setAttribute("x", e.changedTouches[0].pageX);
 	patrat2.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
 	patrat.setAttribute("fill", a);
