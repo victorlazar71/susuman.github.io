@@ -36,15 +36,10 @@ function genereaza_culoare()
 	  ctx.beginPath();
       ctx.fill(a);
       ctx.arc(212.5, 212.5, 100, 0, 2 * Math.PI);
-	  ctx.stroke(10);
+	  ctx.stroke();
    }
    
-   function stroke() 
-	{ 
-	  var a = genereaza_culoare();
-      ctx.fillStyle = a;
-      ctx.strokeW(112.5, 112.5, 200, 200);
-   }
+
    
    function clear_rect() 
    { 
