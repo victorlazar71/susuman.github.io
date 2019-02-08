@@ -15,7 +15,7 @@ var c2 = document.getElementById("canvas");
     function blue_square() 
 	{ 
 	var a = genereaza_culoare();
-      c2_context.fillStyle = "a";
+      c2_context.fillStyle = a;
       c2_context.fillRect(100, 100, 100, 100);
    }
 
@@ -25,7 +25,7 @@ var c2 = document.getElementById("canvas");
    var z = genereaza_culoare();
       c2_context.strokeStyle = z;
       c2_context.strokeRect(95, 95, 110, 110);
-	  c2_context.strokeWidth(3);
+	  c2_context.lineWidht = 5;
    }
    
    function clear_rect() 
