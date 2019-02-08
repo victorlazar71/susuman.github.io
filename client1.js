@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.3";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.4";
 
 svg.addEventListener("touchstart", on_touch);
 
@@ -15,7 +15,7 @@ function on_touch(e)
 	desen.save();
 	desen.clearRect(0, 0, 600, 600);
 	desen.fillStyle = "pink";
-	desen.fillRect(x, 20, 100, 100);
+	desen.fillRect(20, 20, 100, 100);
 	desen.restore()
 	desen.fill();
 	desen.stroke();
