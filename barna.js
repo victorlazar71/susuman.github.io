@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.2";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.3";
 
 function genereaza_culoare()
 {
@@ -23,9 +23,11 @@ var c2 = document.getElementById("canvas");
    function red_stroke() 
    { 
    var z = genereaza_culoare();
+   c2_context.lineWidht = 15;
       c2_context.strokeStyle = z;
       c2_context.strokeRect(95, 95, 110, 110);
-	  c2_context.lineWidht = 5;
+	  c2_context.stroke();
+	  
    }
    
    function clear_rect() 
