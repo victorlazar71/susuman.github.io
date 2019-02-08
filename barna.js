@@ -23,7 +23,7 @@ var c2 = document.getElementById("canvas");
    function red_stroke() 
    { 
    var z = genereaza_culoare();
-   c2_context.lineWidht = 15;
+   c2_context.lineWidht = 100;
       c2_context.strokeStyle = z;
       c2_context.strokeRect(95, 95, 110, 110);
 	  c2_context.stroke();
