@@ -1,6 +1,7 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.1";
 
-
+var x = Math.floor(Math.random() *600);
+var y = Math.floor(Math.random() *600);
 
 function desenare(x, y)
 {
@@ -9,7 +10,7 @@ function desenare(x, y)
 	desen.save();
 	desen.clearRect(0, 0, 600, 600);
 	desen.fillStyle = "pink";
-	desen.fillRect(x, 20, 100, 100);
+	desen.fillRect(x, y, 100, 100);
 	desen.restore();
 	x+=5;
 	var loopTimer = setTimeout("desenare("+x+", "+y+")", 20);
