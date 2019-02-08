@@ -1,15 +1,23 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.1";
 
 var c2 = document.getElementById("canvas");
 
     var c2_context = c2.getContext("2d");
-    function blue_square() { //Blue color square
+    function blue_square() 
+	{ //Blue color square
       c2_context.fillStyle = "#00f";
       c2_context.fillRect(100, 100, 100, 100);
-	  c2_context.fillStyle = "#0f0";
-      c2_context.fillRect(100, 100, 100, 100);
+   }
+   function blue_square() 
+   { //Blue color square
 	  c2_context.fillStyle = "#f00";
       c2_context.fillRect(100, 100, 100, 100);
+   }
+   function blue_square() 
+   { //Blue color square
+	  c2_context.fillStyle = "#0f0";
+      c2_context.fillRect(100, 100, 100, 100);
+
    }
    
    function red_stroke() { //Red color edges
