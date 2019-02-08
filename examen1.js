@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.3";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
 
 var svg = document.getElementById("id_svg");
 var site_html = document.getElementById("id_html");
@@ -23,6 +23,7 @@ function on_touch_one(e)
 	}
 		
 window.open("https://www.w3schools.com");
+alert("ai accesat pagina html5");
 }
 
 function on_touch_two(e)
@@ -37,6 +38,7 @@ function on_touch_two(e)
 	}
 	
 window.open("https://www.java.com/en/");
+alert("ai accesat pagina javascript");
 }
 
 function on_touch_tree(e)
@@ -51,4 +53,5 @@ function on_touch_tree(e)
 	}
 	
 window.open("https://screenrant.com/tag/dragonball/");
+alert("ai accesat pagina dragon ball");
 }
