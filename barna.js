@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.1";
 
 	var c2 = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -16,7 +16,7 @@ function genereaza_culoare()
 	{ 
 	  var a = genereaza_culoare();
       ctx.fillStyle = a;
-      ctx.fillRect(110, 110, 200, 200);
+      ctx.fillRect(115, 115, 200, 200);
    }
 
    
