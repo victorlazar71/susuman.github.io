@@ -1,9 +1,16 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.2";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.3";
 var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
+var patrat1 = document.getElementById("id_patrat1");
+var patrat2 = document.getElementById("id_patrat2");
 
 patrat.addEventListener("touchmove", on_touch_move);
 patrat.addEventListener("touchend", on_touch);
+patrat1.addEventListener("touchmove", on_touch_move);
+patrat1.addEventListener("touchend", on_touch);
+patrat2.addEventListener("touchmove", on_touch_move);
+patrat2.addEventListener("touchend", on_touch);
+
 var svg_rect = svg.getBoundingClientRect();
 
 function genereaza_culoare()
@@ -21,6 +28,10 @@ function on_touch_move(e)
 	e.preventDefault();
 	patrat.setAttribute("x", e.changedTouches[0].pageX);
 	patrat.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
+	patrat1.setAttribute("x", e.changedTouches[0].pageX);
+	patrat1.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
+	patrat2.setAttribute("x", e.changedTouches[0].pageX);
+	patrat2.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
 	patrat.setAttribute("fill", a);
 	
 }
