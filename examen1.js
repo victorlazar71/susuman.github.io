@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.1";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.2";
 
 var svg = document.getElementById("id_svg");
 var site_html = document.getElementById("id_html");
@@ -13,13 +13,13 @@ var svg_rect = svg.getBoundingClientRect();
 
 function on_touch_one(e)
 {
-	if(confirm("apasa un buton"))
+	if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
-		"ai apasat OK"
+		alert("ai apasat OK");
 	}
 	else
 	{
-		"ai apasat anulare"
+		alert("ai apasat anulare");
 	}
 		
 window.open("https://www.w3schools.com");
