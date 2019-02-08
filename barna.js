@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.0";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.1";
 
 function genereaza_culoare()
 {
@@ -15,7 +15,7 @@ var c2 = document.getElementById("canvas");
     function blue_square() 
 	{ //Blue color square
 	var a = genereaza_culoare();
-      c2_context.fillStyle = "a";
+      c2_context.fillStyle = a;
       c2_context.fillRect(100, 100, 100, 100);
    }
 
@@ -23,7 +23,7 @@ var c2 = document.getElementById("canvas");
    function red_stroke() 
    { //Red color edges
    var z = genereaza_culoare();
-      c2_context.strokeStyle = "z";
+      c2_context.strokeStyle = z;
       c2_context.strokeRect(95, 95, 110, 110);
    }
    
