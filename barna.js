@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.2";
+document.getElementById("id_logic_version").innerHTML = "Logic Version 2000.00.00.3";
 
 	var c2 = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -18,6 +18,20 @@ function genereaza_culoare()
       ctx.fillStyle = a;
       ctx.fillRect(112.5, 112.5, 200, 200);
    }
+   
+   function cerc() 
+	{ 
+	  var a = genereaza_culoare();
+      ctx.fillStyle = a;
+      ctx.fillRect(112.5, 112.5, 20);
+   }
+   
+   function stroke() 
+	{ 
+	  var a = genereaza_culoare();
+      ctx.fillStyle = a;
+      ctx.fillRect(112.5, 112.5, 200, 200);
+   }
 
    
    function red_stroke() 
@@ -32,4 +46,5 @@ function genereaza_culoare()
    function clear_rect() 
    { 
       ctx.clearRect(90, 90, 250, 250);
+	  alert("ai sters desenul");
    }
