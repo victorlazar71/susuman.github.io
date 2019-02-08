@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic Version: 2000.00.00.2";
+document.getElementById("id_logic_version").innerHTML = "Logic Version: 2000.00.00.3";
 
 var svg = document.getElementById("svg");
 var picture = document.getElementById("stea");
@@ -8,7 +8,11 @@ svg.addEventListener("touchstart", init);
 
 function init(e)
 {
-	picture;
+	e.preventDefault();
+	
+	for (var i = 0; i < e.changedTouches.length; i++)
+	{
+		picture;
 	
 }
-
+}
