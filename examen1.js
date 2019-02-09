@@ -1,11 +1,11 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.0";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.1";
 
 var svg = document.getElementById("id_svg");
 var site_html = document.getElementById("id_html");
 var site_java = document.getElementById("id_java");
 var monitorizare_gps= document.getElementById("id_NIXE");
-var service_auto = document.getElementById("id_NIXE");
-var verificare_alimentare = document.getElementById("id_NIXE");
+var service_auto = document.getElementById("id_calamajor");
+var verificare_alimentare = document.getElementById("id_Valdemosa");
 
 site_html.addEventListener("touchstart", on_touch_one);
 site_java.addEventListener("touchstart", on_touch_two);
