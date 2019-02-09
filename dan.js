@@ -31,7 +31,7 @@ function on_touch_svg(e)
 		marcare.setAttribute("rx", 120);
 		marcare.setAttribute("ry", 60);
 		marcare.setAttribute("fill", color);
-		svg.appendChild(cub);
+		svg.appendChild(marcare);
 
 	}
 
