@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.02.11.4";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.02.11.0";
 
 var svg = document.getElementById("id_svg");
 
@@ -26,13 +26,13 @@ function on_touch_svg(e)
 	for (var i = 0; i < e.changedTouches.length; i++)
 	{		
 		
-		var marcare = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");	
-		marcare.setAttribute("cx", e.changedTouches[i].pageX);  
-		marcare.setAttribute("cy", e.changedTouches[i].pageY - svg_rect.top);
-		marcare.setAttribute("rx", 120);
-		marcare.setAttribute("ry", 60);
-		marcare.setAttribute("fill", color);
-		svg.appendChild(marcare);
+		var sarpe = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");	
+		sarpe.setAttribute("cx", e.changedTouches[i].pageX);  
+		sarpe.setAttribute("cy", e.changedTouches[i].pageY - svg_rect.top);
+		sarpe.setAttribute("rx", 120);
+		sarpe.setAttribute("ry", 60);
+		sarpe.setAttribute("fill", color);
+		svg.appendChild(sarpe);
 
 	}
 
@@ -41,5 +41,5 @@ function on_touch_svg(e)
 
 function on_touch_end(e)
 {
-	svg.clear();
+	svg.removeChild(sarpe);
 }	
