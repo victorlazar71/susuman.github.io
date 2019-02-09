@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.02.11.1";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.02.11.2";
 
 var svg = document.getElementById("id_svg");
 
@@ -31,7 +31,7 @@ function on_touch_svg(e)
 		marcare.setAttribute("rx", 120);
 		marcare.setAttribute("ry", 60);
 		marcare.setAttribute("fill", color);
-		//svg.appendChild(cub);
+		svg.appendChild(cub);
 
 	}
 
