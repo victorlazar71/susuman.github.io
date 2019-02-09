@@ -92,7 +92,7 @@ function on_touch_five(e)
 window.open("https://fleet.omv.com/FleetServicesProduction/Login.jsp");
 }
 
-function on_touch_five(e)
+function on_touch_six(e)
 {
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
@@ -104,5 +104,5 @@ function on_touch_five(e)
 		alert("ai apasat anulare");
 	}
 	
-alert("TEAPAAAA   !! NU MA MAI ATINGE");;
+alert("TEAPAAAA   !! NU MA MAI ATINGE");
 }
