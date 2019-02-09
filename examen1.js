@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.1";
+document.getElementById("id_logic_version").innerHTML = "Logic: 2019.02.11.2";
 
 var svg = document.getElementById("id_svg");
 var site_html = document.getElementById("id_html");
@@ -20,6 +20,7 @@ function on_touch_one(e)
 	if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
+		alert("ai accesat pagina html5");
 	}
 	else
 	{
@@ -27,7 +28,6 @@ function on_touch_one(e)
 	}
 		
 window.open("https://www.w3schools.com");
-alert("ai accesat pagina html5");
 }
 
 function on_touch_two(e)
@@ -35,6 +35,7 @@ function on_touch_two(e)
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
+		alert("ai accesat pagina javascript");
 	}
 	else
 	{
@@ -42,7 +43,6 @@ function on_touch_two(e)
 	}
 	
 window.open("https://www.java.com/en/");
-alert("ai accesat pagina javascript");
 }
 
 function on_touch_tree(e)
@@ -50,14 +50,13 @@ function on_touch_tree(e)
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
+		alert("ai accesat pagina de monitorizare prin GPS a vehiculelor auto");
 	}
 	else
 	{
 		alert("ai apasat anulare");
 	}
-	
 window.open("https://fise.i-track.ro/_layouts/login.aspx?ReturnUrl=%2f");
-alert("ai accesat pagina de monitorizare prin GPS a vehiculelor auto");
 }
 
 function on_touch_four(e)
@@ -65,6 +64,7 @@ function on_touch_four(e)
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
+		alert("ai accesat pagina de programare la service auto sau pentru a comanda pise de schimb");
 	}
 	else
 	{
@@ -72,7 +72,7 @@ function on_touch_four(e)
 	}
 	
 window.open("https://www.fleet1.ro/");
-alert("ai accesat pagina de programare la service auto sau pentru a comanda pise de schimb");
+
 }
 
 function on_touch_five(e)
@@ -80,6 +80,7 @@ function on_touch_five(e)
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
+		alert("ai accesat pagina de monitorizare a carburantului incarcat in masini");
 	}
 	else
 	{
@@ -87,5 +88,4 @@ function on_touch_five(e)
 	}
 	
 window.open("https://fleet.omv.com/FleetServicesProduction/Login.jsp");
-alert("ai accesat pagina de monitorizare a carburantului incarcat in masini");
 }
