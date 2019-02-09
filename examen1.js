@@ -6,12 +6,14 @@ var site_java = document.getElementById("id_java");
 var monitorizare_gps= document.getElementById("id_NIXE");
 var service_auto = document.getElementById("id_calamajor");
 var verificare_alimentare = document.getElementById("id_Valdemosa");
+var patrat = document.getElementById("patrat");
 
 site_html.addEventListener("touchstart", on_touch_one);
 site_java.addEventListener("touchstart", on_touch_two);
 monitorizare_gps.addEventListener("touchstart", on_touch_tree);
 service_auto.addEventListener("touchstart", on_touch_four);
 verificare_alimentare.addEventListener("touchstart", on_touch_five);
+patrat.addEventListener("touchstart", on_touch_six);
 
 var svg_rect = svg.getBoundingClientRect();
 
@@ -88,4 +90,19 @@ function on_touch_five(e)
 	}
 	
 window.open("https://fleet.omv.com/FleetServicesProduction/Login.jsp");
+}
+
+function on_touch_five(e)
+{
+		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
+	{
+		alert("ai apasat OK");
+		alert("ai accesat pagina de monitorizare a carburantului incarcat in masini");
+	}
+	else
+	{
+		alert("ai apasat anulare");
+	}
+	
+alert("TEAPAAAA   !! NU MA MAI ATINGE");;
 }
