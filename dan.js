@@ -4,7 +4,7 @@ var svg = document.getElementById("id_svg");
 
 svg.addEventListener("touchstart", on_touch_svg);
 svg.addEventListener("mousedown", on_touch_svg);
-svg.addEventListener("touchend", on_touch_end);
+//svg.addEventListener("touchend", on_touch_end);
 
 var svg_rect = svg.getBoundingClientRect();
 
@@ -31,6 +31,7 @@ function on_touch_svg(e)
 		marcare.setAttribute("rx", 120);
 		marcare.setAttribute("ry", 60);
 		marcare.setAttribute("fill", color);
+		//svg.appendChild(cub);
 
 	}
 
