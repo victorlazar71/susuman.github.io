@@ -10,8 +10,8 @@ var verificare_alimentare = document.getElementById("id_NIXE");
 site_html.addEventListener("touchstart", on_touch_one);
 site_java.addEventListener("touchstart", on_touch_two);
 monitorizare_gps.addEventListener("touchstart", on_touch_tree);
-service_auto.addEventListener("touchstart", on_touch_tree);
-verificare_alimentare.addEventListener("touchstart", on_touch_tree);
+service_auto.addEventListener("touchstart", on_touch_four);
+verificare_alimentare.addEventListener("touchstart", on_touch_five);
 
 var svg_rect = svg.getBoundingClientRect();
 
