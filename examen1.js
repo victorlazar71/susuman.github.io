@@ -97,7 +97,7 @@ function on_touch_six(e)
 		if(confirm("esti sigur ca vrei sa accesezi aceasta pagina??"))
 	{
 		alert("ai apasat OK");
-		alert("ai accesat pagina de monitorizare a carburantului incarcat in masini");
+		alert("ai accesat pagina zeului");
 	}
 	else
 	{
