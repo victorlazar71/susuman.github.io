@@ -3,6 +3,7 @@ var svg = document.getElementById("id_svg");
 var patrat = document.getElementById("id_patrat");
 var patrat1 = document.getElementById("id_patrat1");
 var patrat2 = document.getElementById("id_patrat2");
+var patrat3 = document.getElementById("id_patrat3");
 
 patrat.addEventListener("touchmove", on_touch_move);
 patrat.addEventListener("touchend", on_touch);
@@ -10,6 +11,9 @@ patrat1.addEventListener("touchmove", on_touch_move1);
 patrat1.addEventListener("touchend", on_touch);
 patrat2.addEventListener("touchmove", on_touch_move2);
 patrat2.addEventListener("touchend", on_touch);
+patrat3.addEventListener("touchmove", on_touch_move3);
+patrat3.addEventListener("touchend", on_touch);
+
 
 var svg_rect = svg.getBoundingClientRect();
 
@@ -51,6 +55,14 @@ function on_touch_move2(e)
 	patrat2.setAttribute("fill", a);
 
 }
+
+function on_touch_move3(e)
+{
+	var a = genereaza_culoare();
+	e.preventDefault();
+	patrat3.setAttribute("x", e.changedTouches[0].pageX);
+	patrat3.setAttribute("y", e.changedTouches[0].pageY - svg_rect.top);
+	patrat3.setAttribute("fill", a);
 
 function on_touch(e)
 {
